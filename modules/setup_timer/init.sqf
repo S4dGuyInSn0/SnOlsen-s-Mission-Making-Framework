@@ -1,7 +1,7 @@
 ["Setup Timer", "Allows the mission maker to restrict the AO of a side for a set amount of time.", "Olsen"] call FNC_RegisterModule;
 
 #define ADDSETUPMARKER(SIDE, TIME, NAME) \
-if !(markerType NAME == "") then { \
+if !(markerShape NAME == "") then { \
 	_markers set [count _markers, [SIDE, TIME, NAME]]; \
 } else { \
 	_temp = format ["Setup timer module:<br></br>Warning marker ""%1"", in file ""modules\setup timer\settings.sqf"" does not exist.", NAME]; \
